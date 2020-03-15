@@ -1,3 +1,19 @@
-const mutations = {};
+const Mutations = {
+	//This is a resolver
+	async createItem(parents, args, ctx, info) {
+		//TODO check if they are logged int
 
-module.exports = mutations;
+		const item = await ctx.db.mutation.createItem(
+			{
+				data: {
+					...args
+				}
+			},
+			info
+		);
+
+		return item;
+	}
+};
+
+module.exports = Mutations;
