@@ -26,7 +26,6 @@ const Pagination = (props) => (
 			const count = data.itemsConnection.aggregate.count;
 			const pages = Math.ceil(count / perPage);
 			const page = props.page;
-			console.log({ page, pages, count });
 			return (
 				<PaginationStyles>
 					<Head>

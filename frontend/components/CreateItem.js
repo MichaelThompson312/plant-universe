@@ -26,7 +26,7 @@ export default class CreateItem extends Component {
 		description: '',
 		image: '',
 		largeImage: '',
-		price: 0
+		price: null
 	};
 	handleChange = (e) => {
 		const { name, type, value } = e.target;

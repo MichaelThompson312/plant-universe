@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Router from 'next/router';
 import NProgress from 'nprogress';
 import Cart from '../components/Cart';
+import Search from './Search';
 
 Router.onRouteChangeStart = () => {
 	NProgress.start();
@@ -22,7 +23,7 @@ const Logo = styled.h1`
 	transform: skew(-7deg);
 	a {
 		padding: 0.5rem 1rem;
-		background: ${(props) => props.theme.red};
+		background: ${(props) => props.theme.green};
 		color: white;
 		text-transform: uppercase;
 		text-decoration: none;
@@ -57,13 +58,13 @@ const Header = () => (
 		<div className="bar">
 			<Logo>
 				<Link href="/">
-					<a>Sick Fits</a>
+					<a>Plant Universe</a>
 				</Link>
 			</Logo>
 			<Nav />
 		</div>
 		<div className="sub-bar">
-			<p>Search</p>
+			<Search />
 		</div>
 		<Cart />
 	</StyledHeader>
